@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/menu" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/refreshView4"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="16dp"
@@ -189,7 +189,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/bold"
-                    android:text="5.2M"
+                    android:text="7.2M"
                     android:textColor="#1E2432"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="@+id/imageView3"
@@ -289,7 +289,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/bold"
-                    android:text="340K"
+                    android:text="410K"
                     android:textColor="#1E2432"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="@+id/imageView4"

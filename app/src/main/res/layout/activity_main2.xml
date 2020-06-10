@@ -18,6 +18,18 @@
         app:srcCompat="@drawable/ic_arrow_back"
         tools:ignore="VectorDrawableCompat" />
 
+    <ImageView
+        android:id="@+id/refreshView4"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_auto"
+        tools:ignore="VectorDrawableCompat" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
@@ -43,23 +55,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/medium"
-                android:text="New Cases"
+                android:text="Active Cases"
                 android:textColor="#1e2432"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textActive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/bold"
-                android:text="60K"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/medium"
+                android:text="3.2M"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="30sp"
+                android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="@+id/textView5"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -67,92 +79,133 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/medium"
-                android:text="from World Health Organisation"
+                android:text="World Health Organisation"
                 android:textColor="#1e2432"
                 android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="@+id/textView6"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                app:layout_constraintStart_toStartOf="@+id/textActive"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView16"
                 android:layout_width="0dp"
                 android:layout_height="170dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView7"
-                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textActive"
                 app:srcCompat="@drawable/graph" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/textCasePerMillion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/bold"
-                android:text="9.71%"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/medium"
+                android:text="900"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="@+id/imageView16"
-                app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+                app:layout_constraintStart_toStartOf="@+id/textView17"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/medium"
-                android:text="From Last Week"
+                android:text="Cases Per Million"
                 android:textColor="#1e2432"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textView8"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                app:layout_constraintStart_toStartOf="@+id/imageView16"
+                app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/textDeathPerMillion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/bold"
-                android:text="47.9%"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/medium"
+                android:text="50"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="@+id/imageView16"
-                app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+                app:layout_constraintEnd_toEndOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
             <TextView
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/medium"
-                android:text="Recovery Rate"
+                android:text="Deaths Per Million"
                 android:textColor="#1e2432"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView17"
-                app:layout_constraintEnd_toEndOf="@+id/textView18"
-                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                app:layout_constraintEnd_toEndOf="@+id/imageView16"
+                app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/textCritical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/medium"
-                android:text="6.9%"
+                android:text="54K"
                 android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/textView22"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/medium"
+                android:text="Critical"
+                android:textColor="#1e2432"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/medium"
+                android:text="To Know About"
+                android:textColor="#1e2432"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.083"
-                app:layout_constraintStart_toEndOf="@+id/textView6"
-                app:layout_constraintTop_toTopOf="@+id/textView6"
-                app:layout_constraintVertical_bias="0.555" />
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <Button
+                    android:id="@+id/statsButtonIndia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:background="#FFF"
+                    android:drawableLeft="@drawable/flag"
+                    android:fontFamily="@font/medium"
+                    android:text="India" />
+            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

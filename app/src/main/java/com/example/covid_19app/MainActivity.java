@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,16 +54,25 @@ ImageView refresh;
         tvNewCases=(TextView)findViewById(R.id.textNewCase);
         tvDeath=(TextView)findViewById(R.id.textDeath);
         tvRecovered=(TextView)findViewById(R.id.textRecovered);
+
+
         //object to refresh data
-        refresh=(ImageView)findViewById(R.id.imageView2);
+        refresh=(ImageView)findViewById(R.id.refreshView4);
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //call volley
                 getData();
+                Toast.makeText(MainActivity.this,"Updated Successfully!",Toast.LENGTH_LONG).show();
             }
         });
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        getData();
     }
 
     private void getData() {
@@ -80,8 +88,6 @@ ImageView refresh;
                     tvDeath.setText(jsonObject.getString("deaths"));
                     tvRecovered.setText(jsonObject.getString("recovered"));
                     tvNewCases.setText(jsonObject.getString("todayCases"));
-                    Toast.makeText(MainActivity.this,"Updated Successfully!",Toast.LENGTH_LONG).show();
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
